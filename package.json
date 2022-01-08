@@ -1,0 +1,22 @@
+{
+  "name": "hrm-sern",
+  "version": "1.0.0",
+  "description": "hrm made using sql expressjs reactjs nodejs ",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zintesar/hrm-sern.git"
+  },
+  "author": "zintesar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zintesar/hrm-sern/issues"
+  },
+  "homepage": "https://github.com/zintesar/hrm-sern#readme",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
+}
