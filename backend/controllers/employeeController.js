@@ -7,8 +7,8 @@ import Employee from '../models/Employee.js'
 // @access  Public
 
 const getEmployees = asyncHandler(async (req, res) => {
-    // const employees = await Employees.
-    res.send(201)
+    const employees = await Employees.
+        res.send(201)
 })
 
 
