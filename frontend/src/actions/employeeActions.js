@@ -14,7 +14,8 @@ export const register = (firstName, lastName, email) => async (dispatch) => {
             }
         }
 
-        const { data } = await axios.post('/api/users/', { firstName, lastName, email }, config)
+        const { data } = {}
+        // const { data } = await axios.post('/api/users/', { firstName, lastName, email }, config)
 
         dispatch({
             type: ADD_EMPLOYEE_SUCCESS,
@@ -22,7 +23,6 @@ export const register = (firstName, lastName, email) => async (dispatch) => {
         })
 
     } catch (error) {
-        s
 
         dispatch({
             type: ADD_EMPLOYEE_FAIL,
@@ -41,7 +41,9 @@ export const listEmployees = () => async (dispatch) => {
     try {
         dispatch({ type: EMPLOYEE_LIST_REQUEST })
 
-        const { data } = await axios.get('/api/products')
+        const { data } = {}
+
+        // const { data } = await axios.get('/api/products')
 
         dispatch({
             type: EMPLOYEE_LIST_SUCCESS,

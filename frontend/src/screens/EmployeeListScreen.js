@@ -31,11 +31,11 @@ const EmployeeListScreen = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        {users.map(user => (
-                            <tr key={user._id}>
-                                <td>{user.firstName}</td>
-                                <td>{user.lastName}</td>
-                                <td>{user.email}</td>
+                        {employees.map(employee => (
+                            <tr key={employee._id}>
+                                <td>{employee.firstName}</td>
+                                <td>{employee.lastName}</td>
+                                <td>{employee.email}</td>
                             </tr>
                         ))}
                     </tbody>
