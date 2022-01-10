@@ -6,5 +6,4 @@ const router = express.Router()
 
 router.route('/').post(registerEmployee).get(getEmployees)
 
-
 export default router

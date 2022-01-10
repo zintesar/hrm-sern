@@ -7,8 +7,11 @@ import Employee from '../models/Employee.js'
 // @access  Public
 
 const getEmployees = asyncHandler(async (req, res) => {
-    const employees = await Employees.
-        res.send(201)
+    const employees = await Employee.findAll(
+        {
+            attributes: ['id', 'firstName', 'lastName', 'email']
+        })
+    res.json(employees)
 })
 
 
@@ -21,9 +24,13 @@ const getEmployees = asyncHandler(async (req, res) => {
 
 const registerEmployee = asyncHandler(async (req, res) => {
 
-    // const { firstName, lastName, email } = req.body
+
+
+    const { firstName, lastName, email } = req.body
+
 
     const employeeExists = await Employee.findOne({ where: { email: email } })
+
 
     if (employeeExists !== null) {
         res.status(400)
@@ -33,7 +40,7 @@ const registerEmployee = asyncHandler(async (req, res) => {
     const employee = await Employee.create({
         firstName,
         lastName,
-        email
+        email,
     })
 
     if (employee) {

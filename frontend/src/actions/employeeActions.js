@@ -9,13 +9,12 @@ export const register = (firstName, lastName, email) => async (dispatch) => {
         })
 
         const config = {
-            Headers: {
+            headers: {
                 'Content_Type': 'application/json'
             }
         }
 
-        const { data } = {}
-        // const { data } = await axios.post('/api/users/', { firstName, lastName, email }, config)
+        const { data } = await axios.post('/api/employees/', { firstName, lastName, email }, config)
 
         dispatch({
             type: ADD_EMPLOYEE_SUCCESS,
@@ -41,9 +40,8 @@ export const listEmployees = () => async (dispatch) => {
     try {
         dispatch({ type: EMPLOYEE_LIST_REQUEST })
 
-        const { data } = {}
 
-        // const { data } = await axios.get('/api/products')
+        const { data } = await axios.get('/api/employees/')
 
         dispatch({
             type: EMPLOYEE_LIST_SUCCESS,

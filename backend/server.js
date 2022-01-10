@@ -13,6 +13,7 @@ try {
 
 dotenv.config()
 const app = express()
+app.use(express.json())
 
 
 app.get('/', (req, res) => {
@@ -21,8 +22,8 @@ app.get('/', (req, res) => {
 
 app.use('/api/employees', employeeRoutes)
 
-// app.use(notFound)
-// app.use(errorHandler)
+app.use(notFound)
+app.use(errorHandler)
 
 const PORT = process.env.PORT || 5000
 
