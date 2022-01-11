@@ -38,15 +38,15 @@ const RegisterScreen = () => {
             <Form onSubmit={submitHandler}>
                 <Form.Group controlId='firstName' className='mt-2'>
                     <FormLabel>First Name</FormLabel>
-                    <FormControl type='name' placeholder='Enter First Name' value={firstName} onChange={(e) => setFirstName(e.target.value)}></FormControl>
+                    <FormControl type='name' placeholder='Enter First Name' value={firstName} onChange={(e) => setFirstName(e.target.value)} required></FormControl>
                 </Form.Group>
                 <Form.Group controlId='lastName' className='mt-2'>
                     <FormLabel>Last Name</FormLabel>
-                    <FormControl type='name' placeholder='Enter Last Name' value={lastName} onChange={(e) => setLastName(e.target.value)}></FormControl>
+                    <FormControl type='name' placeholder='Enter Last Name' value={lastName} onChange={(e) => setLastName(e.target.value)} required></FormControl>
                 </Form.Group>
                 <Form.Group controlId='email' className='mt-2'>
                     <FormLabel>Email Address</FormLabel>
-                    <FormControl type='email' placeholder='Enter email' value={email} onChange={(e) => setEmail(e.target.value)}></FormControl>
+                    <FormControl type='email' placeholder='Enter email' value={email} onChange={(e) => setEmail(e.target.value)} required></FormControl>
                 </Form.Group>
                 <Button type='submit' variant='primary' className='mt-2'>
                     Sign Up
