@@ -14,6 +14,11 @@ const Employee = db.define('employee', {
     email: {
         type: Sequelize.STRING, allowNull: false
     },
-})
+});
+
+(async () => {
+    await db.sync()
+})();
+
 
 export default Employee
