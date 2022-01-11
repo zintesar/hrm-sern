@@ -9,6 +9,11 @@ Create a .env file in then root and add the following
 ```
 NODE_ENV = development
 PORT = 5000
+DB_NAME = mydb
+DB_USER = root
+DB_PASSWORD = 
+DB_HOST = localhost
+DB_DIALECT = mysql 
 ```
 
 ### Install Dependencies (frontend & backend)
@@ -36,3 +41,19 @@ npm run server
 cd frontend
 npm run build
 ```
+
+### Seed Database
+
+You can use the following commands to seed the database with some sample users and products as well as destroy all data
+
+```
+# Create database
+npm run data:init
+
+# Import data
+npm run data:import
+
+# Destroy data
+npm run data:destroy
+```
+
