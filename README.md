@@ -9,6 +9,11 @@ Create a .env file in then root and add the following
 ```
 NODE_ENV = development
 PORT = 5000
+DB_NAME = mydb
+DB_USER = root
+DB_PASSWORD = 
+DB_HOST = localhost
+DB_DIALECT = mysql 
 ```
 
 ### Install Dependencies (frontend & backend)
