@@ -36,3 +36,20 @@ npm run server
 cd frontend
 npm run build
 ```
+
+### Seed Database
+
+You can use the following commands to seed the database with some sample users and products as well as destroy all data
+
+```
+# Create database
+npm run data:init
+
+# Import data
+npm run data:import
+
+# Destroy data
+npm run data:destroy
+```
+
+```
